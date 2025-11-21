@@ -60,5 +60,6 @@ def predict():
 
 
 if __name__ == "__main__":
-    print("🚀 Starting Flask backend on http://localhost:5000 ...")
-    app.run(debug=True)
+    print("🚀 Starting Flask backend...")
+    app.run(host="0.0.0.0", port=5000)
+
