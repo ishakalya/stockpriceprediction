@@ -7,7 +7,8 @@ function StockDashboard() {
     const [plotData, setPlotData] = useState(null);
 
     const fetchPrediction = async () => {
-        const res = await axios.post("http://localhost:5000/predict", { stock });
+        const res = await axios.post("https://stockpriceprediction-kvon.onrender.com/predict", { stock })
+
 
         const last100 = res.data.last100;
         const predictions = res.data.predictions;
