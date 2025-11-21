@@ -7,7 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 import datetime as dt
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 
 print("✅ Loading model...")
 model = load_model("lstm_model.h5")
